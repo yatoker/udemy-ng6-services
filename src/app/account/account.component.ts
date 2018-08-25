@@ -6,7 +6,9 @@ import { AccountsServices } from '../accounts.services';
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.css'],
-  providers: [LoggingService, AccountsServices]
+  providers: [LoggingService/*, AccountsServices*/]
+  //In the providers section, If the AccountsServices instance is intended to be shared by this components, then it should not be stated here.
+  //If a component is stated in the providers section, it means a new instance of the service will be created.
 })
 export class AccountComponent {
   @Input() account: { name: string, status: string };
