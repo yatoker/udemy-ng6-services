@@ -1,7 +1,7 @@
 import { LoggingService } from "./logging.services";
 import { Injectable } from "@angular/core";
 
-@Injectable() // To ınject a service into another, It should be decorated as Injectable.
+@Injectable() // To inject a service into another, It should be decorated as Injectable.
 export class AccountsServices{
 
 constructor(private loggingService: LoggingService){}
