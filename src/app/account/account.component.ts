@@ -18,5 +18,8 @@ export class AccountComponent {
   onSetTo(status: string) {
 
     this.accountsServices.updateStatus(this.id, status);
+
+    // All subscribers to this event will get to know when status updated event is emitted.
+    this.accountsServices.statusUpdated.emit(status);
   }
 }

@@ -1,10 +1,12 @@
 import { LoggingService } from "./logging.services";
-import { Injectable } from "@angular/core";
+import { Injectable, Output, EventEmitter } from "@angular/core";
 
 @Injectable() // To inject a service into another, It should be decorated as Injectable.
 export class AccountsServices{
 
 constructor(private loggingService: LoggingService){}
+
+    @Output() statusUpdated = new EventEmitter<string>();
 
     accounts = [
         {

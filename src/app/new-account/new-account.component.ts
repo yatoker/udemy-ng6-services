@@ -11,7 +11,10 @@ import { AccountsServices } from '../accounts.services';
 })
 export class NewAccountComponent {
 
-  constructor(private accountsService: AccountsServices) { }
+  constructor(private accountsService: AccountsServices) { 
+    //When status updated event is emitted, this callback will be tirggered.
+    this.accountsService.statusUpdated.subscribe((status: string) => alert('New status: ' + status));
+  }
 
   onCreateAccount(accountName: string, accountStatus: string) {
 
