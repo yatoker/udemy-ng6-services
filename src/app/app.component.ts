@@ -5,7 +5,7 @@ import { AccountsServices } from './accounts.services';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [AccountsServices] /* This service instance will be used by all child components. Every child will share the same instance. */
+  //providers: [AccountsServices] /* This service instance will be used by all child components. Every child will share the same instance. */
 })
 export class AppComponent implements OnInit {
 

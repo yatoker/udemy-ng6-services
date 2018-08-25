@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AccountComponent } from './account/account.component';
 import { NewAccountComponent } from './new-account/new-account.component';
+import { AccountsServices } from './accounts.services';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { NewAccountComponent } from './new-account/new-account.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AccountsServices], //This is an aplication wide instance. Unless this instance is intendedly overridden by a component, this instance will be used.
   bootstrap: [AppComponent]
 })
 export class AppModule { }
